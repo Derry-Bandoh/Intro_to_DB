@@ -30,7 +30,7 @@ order_id INT,
 customer_id INT,
 order_date DATE, 
 CONSTRAINT pk_order_id PRIMARY KEY (order_id),
-CONSTRAINT fk_customer_id FOREIGN KEY REFERENCES customers (customer_id)
+CONSTRAINT fk_customer_id FOREIGN KEY (customer_id) REFERENCES customers (customer_id)
 )
 
 CREATE TABLE Order_Details (
@@ -39,6 +39,6 @@ order_id INT,
 book_id INT, 
 quantity DOUBLE,
 CONSTRAINT pk_orderdetailid PRIMARY KEY (pk_orderdetailid),
-CONSTRAINT fk_order_id FOREIGN KEY REFERENCES orders(order_id),
-CONSTRAINT fk_book_id FOREIGN KEY REFERENCES books (book_id)
+CONSTRAINT fk_order_id FOREIGN KEY (order_id) REFERENCES orders(order_id),
+CONSTRAINT fk_book_id FOREIGN KEY (book_id) REFERENCES books (book_id)
 )
