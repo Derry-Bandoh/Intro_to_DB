@@ -1,5 +1,11 @@
 CREATE DATABASE IF NOT EXISTS alx_book_store;
 
+CREATE TABLE authors (
+author_id INT,
+author_name VARCHAR(215),
+CONSTRAINT pk_author_id PRIMARY KEY (author_id)    
+);
+
 CREATE TABLE books (
 book_id INT,
 title VARCHAR(130),
@@ -10,11 +16,6 @@ CONSTRAINT pk_book_id PRIMARY KEY (book_id),
 CONSTRAINT fk_author_id FOREIGN KEY REFERENCES authors(author_id)  
 );
 
-CREATE TABLE authors (
-author_id INT,
-author_name VARCHAR(215),
-CONSTRAINT pk_author_id PRIMARY KEY (author_id)    
-);
 
 CREATE TABLE customers(
 customer_id INT,
