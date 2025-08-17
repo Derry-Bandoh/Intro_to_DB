@@ -40,4 +40,5 @@ book_id INT,
 quantity DOUBLE,
 CONSTRAINT pk_orderdetailid PRIMARY KEY (pk_orderdetailid),
 FOREIGN KEY (order_id) REFERENCES Orders(order_id),
-FOREIGN KEY (book_id) REFERENCES Books (book_id)
+FOREIGN KEY (book_id) REFERENCES Books(book_id)
+)
