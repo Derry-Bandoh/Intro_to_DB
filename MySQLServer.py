@@ -9,11 +9,11 @@ mydb = mysql.connector.connect(
 
 mycursor = mydb.cursor()
 
-db_name = "alx_book_store"
-sql = f"CREATE DATABASE IF NOT EXISTS {db_name}"
+#db_name = "alx_book_store"
+sql = "CREATE DATABASE IF NOT EXISTS alx_book_store"
 
 mycursor.execute(sql)
-print(f"Database '{db_name}' created successfully!")
+print("Database 'alx_book_store' created successfully!")
 
 mycursor.close()
 mydb.close()
